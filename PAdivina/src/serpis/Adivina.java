@@ -16,7 +16,7 @@ public class Adivina {
 		Random random = new Random();
 		int numeroAleatorio = random.nextInt(1000) + 1;
 		
-		//System.out.println("numeroAleatorio="+numeroAleatorio);
+		System.out.println("numeroAleatorio="+numeroAleatorio);
 		
 		int contadorIntentos = 1;
 		
@@ -41,7 +41,7 @@ public class Adivina {
 			contadorIntentos++; //parecido a contadorIntentos = contadorIntentos + 1;
 		}
 		
-		System.out.println("Has acertado. Fin.");
+		System.out.printf("Has acertado en el intento %d. Fin.", contadorIntentos);
 
 	}
 
