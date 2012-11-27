@@ -9,8 +9,16 @@ public class Array {
 		// TODO Auto-generated method stub
 		int[] v1 = new int[]{5, 17, 15, 10, 3, 9};
 		int m1 = menor(v1);
-		System.out.println("m1=" + m1);
+		//System.out.println("m1=" + m1);
 		
+		int pos = posicionDe(v1, 33);
+		System.out.println("pos=" + pos);
+		
+	}
+	
+	private static int posicionDe(int[] v, int x) {
+		//TODO implementar
+		return -1;
 	}
 	
 	private static int menor(int[] v) {
