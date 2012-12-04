@@ -17,8 +17,11 @@ public class Array {
 	}
 	
 	private static int posicionDe(int[] v, int x) {
-		//TODO implementar
-		return -1;
+		int count = v.length;
+		int index = 0;
+		while (index < count && v[index] != x)
+			index++;
+		return index == count ? -1 : index;
 	}
 	
 	private static int menor(int[] v) {
