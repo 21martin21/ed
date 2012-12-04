@@ -16,7 +16,7 @@ public class Array {
 		
 	}
 	
-	private static int posicionDe(int[] v, int x) {
+	public static int posicionDe(int[] v, int x) {
 		int count = v.length;
 		int index = 0;
 		while (index < count && v[index] != x)
