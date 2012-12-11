@@ -23,8 +23,9 @@ public class Array {
 			index++;
 		return index == count ? -1 : index;
 	}
-	
-	private static int menor(int[] v) {
+
+	//devuelve el valor menor en el array (lanza excepción si no tiene ningún elemento) 
+	public static int menor(int[] v) {
 		int m = v[0];
 		for (int index = 1; index < v.length; index++)
 			if (v[index] < m)
@@ -32,19 +33,4 @@ public class Array {
 		return m;
 	}
 
-	private static int menorTris(int[] v) {
-		int m = v[0];
-		for (int item : v)
-			if (item < m)
-				m = item;
-		return m;
-	}
-
-	private static int menorBis(int[] v) {
-		int posicionMenor = 0;
-		for (int index = 1; index < v.length; index++)
-			if (v[index] < v[posicionMenor])
-				posicionMenor = index;
-		return v[posicionMenor];
-	}
 }

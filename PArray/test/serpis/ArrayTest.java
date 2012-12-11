@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 import junit.framework.Assert;
 
 import org.junit.Test;
+import org.junit.experimental.categories.Categories.ExcludeCategory;
 
 
 public class ArrayTest {
@@ -27,6 +28,22 @@ public class ArrayTest {
 		pos = Array.posicionDe(v1, 77);
 		Assert.assertEquals(-1, pos);
 		
+	}
+	
+	@Test
+	public void menor() {
+		int[] v1 = new int[]{5, 17, 15, 10, 3, 9};
+		int m1 = Array.menor(v1);
+		Assert.assertEquals(3, m1);
+		
+		Assert.assertEquals(4, Array.menor( new int[]{4, 6, 5} ));
+		Assert.assertEquals(7, Array.menor( new int[]{8, 9, 7} ));
+	}
+	
+	@Test (expected=IndexOutOfBoundsException.class)
+	public void menorVacio() {
+		int[] vacio = new int[]{};
+		Array.menor(vacio);
 	}
 
 }
